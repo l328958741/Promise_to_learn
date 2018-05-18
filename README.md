@@ -19,5 +19,6 @@ function readTopic(){
 }
 
 let name = readTopic();
-console.log(name);    //结果是undefined，为什么？request()是异步函数，它总是在readTopic()执行完后才执行，又readTopic()中没有return，name接不到返回值，相当于没有赋值
+console.log(name);    //结果是undefined，为什么？
+                      //request()是异步函数，它总是在readTopic()执行完后才执行，又readTopic()中没有return,没有赋值给name
 ```
