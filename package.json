@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "ramda": "^0.25.0"
+  },
+  "devDependencies": {
+    "axios": "^0.18.0",
+    "request": "^2.86.0"
+  }
+}
