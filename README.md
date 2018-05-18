@@ -6,16 +6,17 @@ learn how to use promise
 const request = require('request');
 
 function readTopic(){
-    request('https://cnodejs.org/api/v1/topics?' + 'page=1&tab=job&limit=3&mdrender=false', function(error, response, body){
-        if(error){
-            console.log(error);
-        }
+    request('https://cnodejs.org/api/v1/topics?' + 'page=1&tab=job&limit=3&mdrender=false',
+        function(error, response, body){
+            if(error){
+                console.log(error);
+            }
 
-        let result = JSON.parse(response.body).data;
-        // console.log(result[0].author.loginname);
+            let result = JSON.parse(response.body).data;
+            // console.log(result[0].author.loginname);
         
-        return result[0].author.loginname;
-    })
+            return result[0].author.loginname;
+        })
 }
 
 let name = readTopic();
